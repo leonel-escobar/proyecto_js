@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-azul: #0067b8;
+    --color-azul-hover: #005da6;
+    --color-negro: #262626;
+}
+
+.container {
+    max-width: 1112px;
+    margin: 0 auto;
+}
+
+.primeraImagen img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    margin-bottom: 25px;
+    color: var(--color-azul);
+    font-size: 32px;
+}
+
+.subtitulo::after {
+    content: "";
+    display: block;
+    background: var(--color-azul);
+    width: 60px;
+    height: 3px;
+    position: relative;
+    top: 10px;
+}
+
+.margenSubtitulo {
+    margin-left: 80px;
+}
+
+/* Estilos del header */
+.presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: var(--color-azul);
+    color: #f2f2f2;
+}
+
+.presentacion h1 {
+    font-size: 35px;
+}
+
+/* Estilos de la sección principal */
+.contSimulador {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 630px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "simulador informeFinal";
+}
+
+/* Estilos del formulario */
+.simulador {
+    grid-area: simulador;
+    justify-self: center;
+}
+
+.simulador form {
+    position: relative;
+    margin-top: 60px;
+}
+
+.simulador div {
+    margin: 15px;
+}
+
+.simulador input, select {
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    margin: 15px 15px 5px 0;
+    text-indent: 2px;
+    border: none;
+    border-bottom: 1px solid var(--color-negro);
+    outline: none;
+}
+
+.aclaracion {
+    font-size: 14px;
+    margin: 0;
+    color: gray;
+}
+
+.botonAzul {
+    color: #fff;
+    background-color: var(--color-azul);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 0 16px;
+    height: 32.4px;
+    line-height: 32.4px;
+    font-size: 14px;
+    border-radius: 1px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 
+                0 3px 1px -2px rgb(0 0 0 / 12%), 
+                0 1px 5px 0 rgb(0 0 0 / 20%)
+}
+
+.botonAzul:hover {
+    background-color: var(--color-azul-hover);
+    transition: 600ms;
+}
+
+
+/* Estilos del informe final */
+.informeFinal {
+    grid-area: informeFinal;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: center;
+    padding-top: 80px;
+}
+
+.informeFinal__resultado {
+    width: 385px;
+    height: 150px;
+    color: var(--color-negro);
+    background-color: #f2f2f2;
+    border-left: 3px solid var(--color-azul);
+    padding: 20px 20px 20px 40px;
+    margin-top: 40px;
+}
+
+#informeDeInteres {
+    height: 100%;
+}
+
+#informeDeInteres ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#informeLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#informeLogo img {
+    width: 150px;
+}
+
+.informacion {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.informacion__texto {
+    width: 400px;
+}
+
+.informacion__texto h3 {
+    color: var(--color-negro);
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.informacion__texto p {
+    color: #666;
+    font-size: 16px;
+}
+
+.error {
+    font-size: 14px;
+    color:#ee6e73;
+}
+
+.error:first-child {
+    padding-top: 20px;
+}
+
+/* Valor del dolar */
+.cotizacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    grid-template-areas: "cotizacion__imagen cotizacion__info";
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.cotizacion__imagen {
+    grid-area: cotizacion__imagen;
+    justify-self: center;
+}
+
+.cotizacion__imagen img {
+    width: 450px;
+    border-radius: 6px;
+}
+
+.cotizacion__info {
+    grid-area: cotizacion__info;
+    width: 450px;
+    justify-self: center;
+}
+
+/* Estilos del Footer */
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-end;
+    height: 200px;
+    background-color: #151515;
+    color: #7e7d7d;
+}
+
+.redesSociales {
+    margin-bottom: 80px;
+}
+
+.redesSociales::after {
+    content: " ";
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #7e7d7d;
+    position: relative;
+    top: 35px;
+    left: 60px;
+}
+
+.redesSociales ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.redesSociales li {
+    margin: 0 20px;
+}
+
+.redesSociales a i {
+    font-size: 25px;
+    color: #7e7d7d;
+    cursor: pointer;
+} 
+
+.copyrightFooter {
+    margin-bottom: 15px;
+}
+
+/* Modal */
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.modal__contenido {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 180px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, 
+                rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 
+                rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.modal__contenido p:first-child {
+    margin-bottom: 10px;
+}
+
+.valor {
+    color: var(--color-azul);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .presentacion h1 {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 22px;
+    }
+
+    .contSimulador {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 550px 420px; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "simulador"
+          "informeFinal";
+    }
+
+    .informeFinal {
+        padding-top: 0;
+    }
+
+    .informeFinal__resultado {
+        width: 300px;
+        margin-top: 0;  
+    }
+
+    .informacion__texto {
+        width: 300px;
+    }
+
+    .cotizacion {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 270px);
+        grid-template-areas: "cotizacion__imagen" 
+                            "cotizacion__info";
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    .cotizacion__imagen img {
+        width: 320px;
+    }
+
+    .cotizacion__info {
+        width: 320px;
+    }
+    
+    .modal__contenido {
+        width: 190px;
+        padding: 0 80px;
+    }
+}

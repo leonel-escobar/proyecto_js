@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/mi_archivo.js"></script>
+    <title>Simulador de plazo fijo</title>
+</head>
+<body>
+    <header>
+
+        <!-- Título principal -->
+        <div class="presentacion">
+            <h1>
+                <i class="bi bi-bar-chart-fill"></i>
+                Simulá tu plazo fijo
+            </h1>
+        </div>
+    </header>
+    <main>
+
+        <!-- Banner -->
+        <div class="primeraImagen">
+            <img src="images/banner.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="contSimulador">
+                <div class="simulador">
+                    <h2 class="subtitulo">Simulador de plazo fijo</h2>
+                    
+                    <!-- Simulador -->
+                    <form id="formSimulador">
+                        <div>
+                            <select id="bancoUsuario">
+                                <option value="SELECCION">Seleccione un banco</option>
+                                <option value="BBVA">BBVA Francés</option>
+                                <option value="GALICIA">Galicia</option>
+                                <option value="HSBC">HSBC</option>
+                                <option value="HIPOTECARIO">Banco Hipotecario S.A.</option>
+                                <option value="NACION">Banco Nación</option>
+                                <option value="PROVINCIA">Banco Provincia</option>
+                                <option value="REBANKING">Rebanking</option>
+                                <option value="SANTANDER">Santander Rio</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="montoDepositar" placeholder="Ingrese el monto a depositar"><br>
+                            <span class="aclaracion">(El monto mínimo permitido es de $1000)</span>
+                        </div>
+                        <div>
+                            <input type="number" id="plazoDepositar"  placeholder="Ingrese el plazo en días"><br>
+                            <span class="aclaracion">(Mínimo 30 días - Máximo 365 días)</span>
+                        </div>
+                        <div>
+                            <button class="botonAzul">
+                                Simular
+                            </button>
+                            <button id="btnBorrar" type="reset" class="botonAzul">
+                                Borrar
+                            </button>
+                        </div>
+                    </form>
+                    <div id="informeDeErrores"></div>
+                </div>
+
+                <!-- Informe final -->
+                <div class="informeFinal">
+                    <div class="informeFinal__resultado">
+                        <div id="informeLogo">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <div id="informeDeInteres"></div>
+                    </div>
+                    <div class="informacion">
+                        <div class="informacion__texto">
+                            <h3>Informate y solicitá tu plazo fijo</h3>
+                            <p>El uso de esta herramienta no almacena ningún tipo de información personal ni implica realizar contrato alguno con el banco seleccionado.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Valor del dolar -->
+            <div class="cotizacion">
+                <div class="cotizacion__imagen">
+                    <img src="images/consulta__imagen.jpg" alt="Celular">
+                </div>
+                <div class="cotizacion__info">
+                    <h3 class="subtitulo">Precio del dólar hoy</h3>
+                    <p>Consultá el valor de la cotización del dólar en Argentina, actualizado, minuto a minuto.</p>
+                </div>
+            </div> 
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal">
+            <div class="modal__contenido">
+                <div class="modal__valores"></div>
+                <button id="cerrarModal" class="botonAzul">Cerrar</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Comienza el footer -->
+    <footer>
+        <div class="redesSociales">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-rss-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ar.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyrightFooter">
+           <p>© Todos los derechos reservados 2021</p> 
+        </div>
+    </footer>
+
+</body>
+</html>
